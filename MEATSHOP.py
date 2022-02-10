@@ -25,16 +25,15 @@ while i < 10:
   elif meat == "0":
       print("Check bill")
       break
-  
-print(money,"baht")
-m=float(input("please pay:"))
-if m > money:
+  print(money,"baht")
+  m=float(input("please pay:"))
+  if m > money:
     change= m-money
     print("chang = ",change,"baht")
     print("*****Thankyou*****")
-elif m == money:
+  elif m == money:
     print("get enough money")
     print("*****Thankyou*****")
-else:
+  else:
     print("not enough money")
-
+  
