@@ -25,6 +25,8 @@ elif t == 4:
     tran = "mattress cabinet fan"
     price = 1000
 print(tran)
+Q=int(input("number of passengers:"))
+price=price*Q
 f=input("Do you need food packages on the go (y/n)")
 if f=="y":
   food = 350
@@ -45,6 +47,11 @@ money = int(input("please pay:"))
 if(money >price):
     change = money-price
     print("change=",change)
+    money_type = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
+    for t in money_type:
+       if change >= t:
+         print("{} บาท = {}".format(t, int(change / t)))
+         change = change % t
 elif(money ==price):
    print("get enough money")
 else:
