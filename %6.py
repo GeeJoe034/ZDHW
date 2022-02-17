@@ -8,4 +8,4 @@ while i < 1001:
    else:
        print(i,":undivided")
        i +=1
-print("cou
+print("count=",count)
