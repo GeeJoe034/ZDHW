@@ -48,14 +48,19 @@ void addData()
     printf("english:");
     scanf("%d", &data->english);
     data->sum = data->math + data->science +data->english;
-    if (data->sum<=100){
-    	strcpy(data->grade,"A");
-	}else if(data->sum<69){
-		strcpy(data->grade,"B");
-	}else if(data->sum<49){
-		strcpy(data->grade,"C");
+    if (data->sum < 49){
+		strcpy(data->grade, "C");
+	}else if(data->sum <= 69){
+		strcpy(data->grade, "B");
+	}else if(data->sum <= 100){
+		strcpy(data->grade, "A");	
 	}
-    
+        printf("Name      %s\n", data->name);
+        printf("  math    %d\n", data->math);
+        printf("  science %d\n", data->science);
+        printf("  english %d\n", data->english);
+        printf("Sum       %d\n", data->sum);
+        printf("grade     %s\n", data->grade);
     if(root == NULL){
         data->next = NULL;
     }else{
@@ -158,7 +163,7 @@ int main()
                 searchdata();
                 break;
             case 5:
-				return 0;    
+		return 0;    
                 
        }
    }
