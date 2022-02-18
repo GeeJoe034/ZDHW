@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
-
 struct node 
 {
     char name[100];
@@ -48,12 +46,12 @@ void addData()
     printf("english:");
     scanf("%d", &data->english);
     data->sum = data->math + data->science +data->english;
-    if (data->sum <= 49){
-		strcpy(data->grade, "C");
-	}else if(data->sum >= 50||data->sum <= 69){
+    if (data->sum >= 70){
+		strcpy(data->grade, "A");
+	}else if(data->sum >= 50){
 		strcpy(data->grade, "B");
-	}else if(data->sum >= 70||data->sum <= 100){
-		strcpy(data->grade, "A");	
+	}else if(data->sum <=49){
+		strcpy(data->grade, "C");	
 	}
         printf("Name      %s\n", data->name);
         printf("  math    %d\n", data->math);
@@ -78,7 +76,7 @@ void displayData()
         printf("  science %d\n", ptr->science);
         printf("  english %d\n", ptr->english);
         printf("Sum       %d\n",ptr->sum);
-        printf("grade       %s\n",ptr->grade);
+        printf("grade     %s\n",ptr->grade);
         ptr = ptr->next;
     }
     printf("\n");
